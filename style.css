@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(300px,1fr));
+}
+.image-wraper{
+    position: relative;
+    overflow: hidden;
+}
+.image-wraper>img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+.text{
+    position: absolute;
+    inset: 0;
+    color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

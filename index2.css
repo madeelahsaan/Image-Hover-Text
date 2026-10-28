@@ -1,0 +1,69 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px, 1fr));
+}
+.container{
+    position: relative;
+    overflow: hidden;
+}
+.container > img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+.container > .text{
+    position: absolute;
+    inset: 0;
+    font-size: 24px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container>img,
+.container>.text{
+    transition: 300ms ease-in-out; 
+}
+.container > .text{
+    opacity:0 ;
+}
+.container:hover > .text{
+    opacity: 1;
+}
+.container > img.zoom{
+    scale: 1;
+}
+.container:hover > img.zoom{
+    scale: 1.25;
+}
+.container:hover > img.blur{
+    filter: blur(5px);
+}
+
+.container > .text.slide-left{
+    transform: translateX(-100%);
+}
+.container:hover > .text.text.slide-left{
+    transform: translateX(0);
+}
+.container > .text.slide-right{
+    transform: translateX(100%);
+}
+.container:hover > .text.text.slide-right{
+    transform: translateX(0);
+}
+.container > .text.slide-down{
+    transform: translateY(-100%);
+}
+.container:hover > .text.text.slide-down{
+    transform: translateY(0);
+}
+.container > .text.slide-up{
+    transform: translateY(100%);
+}
+.container:hover > .text.text.slide-up{
+    transform: translateY(0);
+}
